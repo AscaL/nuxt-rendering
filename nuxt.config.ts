@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   routeRules: {
     // Static page generated on-demand, revalidates in background
-    '/swr': { swr: true },
+    '/swr': { swr: 30 },
     // Static page generated on-demand once
     '/static': { static: true },
     // Render these routes with SPA
