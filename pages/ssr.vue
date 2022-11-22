@@ -4,14 +4,16 @@
     <div v-if="pending">Loading</div>
     <div v-else>
       <br>
-      {{ data.date }}
+      <!-- {{ time }} -->
       <br>
-      {{ data.dateTime }}
+      {{ data.datetime }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-
-const { data, pending } = await useFetch('https://www.timeapi.io/api/Time/current/zone?timeZone=Europe/Amsterdam')
+// const { time } = await $fetch('/api/getTime')
+// console.log(`🚀 ~ time`, time)
+const { data, pending } = await useFetch('https://worldtimeapi.org/api/ip')
+console.log(`🚀 ~ data`, data)
 </script>
