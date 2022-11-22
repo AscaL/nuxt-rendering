@@ -3,13 +3,13 @@
     <!-- {{ time }} -->
     <ul>
       <li>
-        <NuxtLink to="/swr">swr - cached + new</NuxtLink>
+        <a href="/swr">swr - cached + new</a>
       </li>
       <li>
-        <NuxtLink to="/ssr">ssr - client side</NuxtLink>
+        <a href="/ssr">ssr - client side</a>
       </li>
       <li>
-        <NuxtLink to="/static">static - full static</NuxtLink>
+        <a href="/static">static - full static</a>
       </li>
     </ul>
   </div>
