@@ -1,18 +1,15 @@
+<script setup lang="ts">
+const { data, pending } = await useFetch('https://worldtimeapi.org/api/ip')
+</script>
+
 <template>
   <div>
-    SSR
-    <div v-if="pending">Loading</div>
+    <h3>SSR False - Only client side</h3>
+    <div v-if="pending">
+      Loading
+    </div>
     <div v-else>
-      <br>
-      <!-- {{ time }} -->
-      <br>
-      {{ data.datetime }}
+      {{ useDateFormat(data.datetime, 'YYYY-MM-DD HH:mm:ss') }}
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-// const { time } = await $fetch('/api/getTime')
-// console.log(`🚀 ~ time`, time)
-const { data, pending } = await useFetch('https://worldtimeapi.org/api/ip')
-</script>
